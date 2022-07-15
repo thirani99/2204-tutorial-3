@@ -1,6 +1,6 @@
 object main extends App{
 
-  //output--->
+  //output--->95.0
   def  fahrenheit(t:Double):Double = {
     return (t* 1.8 + 32)
   }
