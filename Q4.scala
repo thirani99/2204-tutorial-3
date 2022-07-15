@@ -1,14 +1,14 @@
 object main extends App{
-  def CoverPrice(x: Int): Double = { //total cost for cover pages
+  def coverPrice(x: Int): Double = { //total cost for cover pages
   return x * 24.95
   }
 
   def discount(x: Int): Double = { // discount for all copies
-  return  CoverPrice(x)*0.4
+  return  coverPrice(x)*0.4
   }
 
-  def AfterReduceDiscount(x:Int):Double= {
-  return CoverPrice(x)-discount(x)
+  def afterReduceDiscount(x:Int):Double= {
+  return coverPrice(x)-discount(x)
   }
 
   def shippingCost(x: Int): Double = { // shipping cost
@@ -22,7 +22,7 @@ object main extends App{
   }
 
   def total_cost(x:Int):Double = {
-     AfterReduceDiscount(x) + shippingCost(x)
+     afterReduceDiscount(x) + shippingCost(x)
   }
   //Question 4 - cost of books
   val final_cost = total_cost(60)
